@@ -18,11 +18,12 @@
                     Monochrome
                 </span>
             </button>
-            <button class = "pushable" id = "color">
+            
+            <button class = "pushable">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front">
-                    Color
+                    <input class = "pushable" id = "color-selector" type = "color" id= "color-selector" value = "#ffffff">
                 </span>
             </button>
             <button class = "pushable" id = "reset">
@@ -36,7 +37,8 @@
         <div class = "sketch">
             <div class = "container"></div>
             <div class = "slidercontainer">
-                <input type = "range" min = "1" max = "100" value = "50" class = "slider">
+                <div class = "rangetext">32 x 32</div>
+                <input type = "range" min = "1" max = "64" value = "32" class = "slider" >
             </div>
         </div>
 

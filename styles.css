@@ -37,16 +37,13 @@ body {
     height: 480px;
     width: 480px;
     border-style: solid;
-    border-color: blueviolet;
+    border-color: rgb(32, 223, 26);
     position: relative;
     display: flex;
     flex-wrap: wrap;
     min-width: 480px;
 }
 
-.newDiv:hover {
-    background-color: black;
-}
 
 .pushable {
     position: relative;
@@ -54,36 +51,83 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-  }
-  
-  .edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(32, 223, 26);
-  }
-  .front {
-    font-family: Arcade;
-    display: block;
-    position: relative;
-    padding: 12px 42px;
-    font-size: 10px;
-    color: white;
-    background: blueviolet;
-    transform: translateY(-4px) translateX(-4px);
-    transition: transform 60ms;
-  }
-  
-  .sketch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  .pushable:active .front {
-    transform: translateY(0px) translateX(0px);
-  }
-  
-  
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(32, 223, 26);
+}
+.front {
+  font-family: Arcade;
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  font-size: 10px;
+  color: white;
+  background: blueviolet;
+  transform: translateY(-6px) translateX(-6px);
+  transition: transform 20ms;
+}
+
+.sketch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.pushable:hover .front{
+  transform :translateX(-4px) translateY(-4px);
+}
+.pushable:active .front {
+  transform: translateY(0px) translateX(0px);
+}
+
+
+.slidercontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: rgb(32, 223, 26);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.rangetext {
+  font-family: Arcade;
+  color: blueviolet;
+
+}
+
+.newDiv {
+  background-color: black;
+  border: 1px solid blueviolet;
+  box-sizing: border-box;
+}
+
+#color-selector {
+  height: 50px;
+  width: 50px;
+}
+
+
